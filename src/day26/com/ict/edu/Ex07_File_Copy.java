@@ -6,11 +6,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
-// D:/ksj/java1.png 읽어서 D:/ksj/util/java1.png 내용 추가 
-public class Ex04_File_IO {
-	public static void main(String[] args) {
-		String pathname = "D:/ksj/java1.png";
-		String pathname1 = "D:/ksj/util/java1.png";
+public class Ex07_File_Copy {
+	public static void main(String filePath, String text) {
+		String pathname = filePath;
+		String pathname1 = filePath;
+		
 		File file = new File(pathname);
 		File file1 = new File(pathname1);
 		FileInputStream fis = null;
@@ -24,14 +24,8 @@ public class Ex04_File_IO {
 			fos = new FileOutputStream(file1,true);
 			bos = new BufferedOutputStream(bos);
 			
-			//모든 파일의 복사, 이동은 해당 방식으로 해야함
-			//이게 기본? 이거쓴느거 추천
-			//int b = 0;
-			//while(b = bis.read()) != -1	{
-			//	bos.write(b);
-			//}
-			//
-			byte[] b = new byte[(int) file.length()];
+			String str = text;
+			byte[] b = str.getBytes();
 			fis.read(b);
 			fos.write(b);
 			
@@ -49,4 +43,5 @@ public class Ex04_File_IO {
 			}
 		}		
 	}
+
 }
