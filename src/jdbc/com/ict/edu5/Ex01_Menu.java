@@ -1,4 +1,4 @@
-package day23.com.ict.edu;
+package jdbc.com.ict.edu5;
 
 import java.awt.FileDialog;
 import java.awt.Font;
@@ -17,14 +17,14 @@ import javax.swing.ScrollPaneConstants;
 //메뉴바에 메뉴를 붙이고 메뉴에 메뉴 아이템을 붙인다.
 //메뉴아이템 -> 메뉴 -> 메뉴바 -> 프레임
 //메뉴바는 프레임에 붙인다. (setJMenuBar)
-public class Ex06_Menu extends JFrame{
+public class Ex01_Menu extends JFrame{
 	JTextArea jta;
 	JScrollPane jsp;
 	JMenuBar jmb;
 	JMenu m_file, m_form, font_form, m_help;
 	JMenuItem i_newfile, i_openFile, i_saveFile, i_exitFile, i_item1,
 					i_item2, i_item3, i_help, i_info;
-	public Ex06_Menu() {
+	public Ex01_Menu() {
 		super("간단메모장");
 		jta = new JTextArea();
 		jsp = new JScrollPane(jta, ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
@@ -178,7 +178,7 @@ public class Ex06_Menu extends JFrame{
 		});
 	}
 	public static void main(String[] args) {
-		new Ex06_Menu();
+		new Ex01_Menu();
 	}
 
 }

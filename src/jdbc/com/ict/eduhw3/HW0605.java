@@ -4,6 +4,8 @@ package jdbc.com.ict.eduhw3;
 import java.awt.BorderLayout;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -77,6 +79,14 @@ public class HW0605 extends JFrame{
 	setLocationRelativeTo(null);
 	setVisible(true);
 	setDefaultCloseOperation(EXIT_ON_CLOSE);
+	
+	
+	jb1.addActionListener(new ActionListener() {
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			
+		}
+	});
 	
 	
 	}	
